@@ -30,9 +30,9 @@ function setupSocketAPI(server) {
             logger.info(`Socket disconnected [id: ${socket.id}]`)
         })
 
-        socket.on('codeUpdated', () => {
+        socket.on('codeUpdated', (codeId) => {
             logger.info(`codeUpdated request from client [id: ${socket.id}], broadcasting...`)
-            socket.broadcast.emit('codeUpdated')
+            socket.to(codeId).emit('codeUpdated')
         })
     })
 }
