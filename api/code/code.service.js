@@ -6,7 +6,8 @@ import { logger } from '../../services/logger.service.js'
 
 export const codeService = {
   query,
-  getById
+  getById,
+  update
 }
 
 async function query() {
@@ -27,6 +28,18 @@ async function getById(codeId) {
     return codeBlock
   } catch (err) {
     logger.error(`Cannot find code ${codeId}`, err)
+    throw err
+  }
+}
+
+async function update(code) {
+  try {
+    const collection = await dbService.getCollection('codeblock')
+    const { _id, ...codeToUpdate } = code
+    await collection.updateOne({ _id: new ObjectId(_id) }, { $set: codeToUpdate })
+    return code
+  } catch (err) {
+    logger.error('cannot update code', err)
     throw err
   }
 }

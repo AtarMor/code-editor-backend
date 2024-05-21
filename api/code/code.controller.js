@@ -22,3 +22,14 @@ export async function getCodeBlockById(req, res) {
     res.status(500).send({ err: 'Failed to get code block' })
   }
 }
+
+export async function updateCodeBlock(req, res) {
+  try {
+      const codeBlock = req.body
+      const updatedCode = await codeService.update(codeBlock)
+      res.json(updatedCode)
+  } catch (err) {
+      logger.error('Failed to update code block', err)
+      res.status(500).send({ err: 'Failed to update code block' })
+  }
+}
