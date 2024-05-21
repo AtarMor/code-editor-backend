@@ -5,6 +5,7 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 
 import { logger } from './services/logger.service.js'
+import { codeRoutes } from './api/code/code.routes.js'
 
 const app = express()
 const server = http.createServer(app)
@@ -26,6 +27,8 @@ if (process.env.NODE_ENV === 'production') {
   }
   app.use(cors(corsOptions))
 }
+
+app.use('/api/code', codeRoutes)
 
 app.get('/**', (req, res) => {
   res.sendFile(path.resolve('public/index.html'))

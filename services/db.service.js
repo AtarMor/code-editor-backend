@@ -5,7 +5,7 @@ import { config } from '../config/index.js'
 import { logger } from './logger.service.js'
 
 export const dbService = {
-  getCollection,
+  getCollection
 }
 
 var dbConn = null
@@ -26,6 +26,7 @@ async function connect() {
   try {
     const client = await MongoClient.connect(config.dbURL)
     const db = client.db(config.dbName)
+    logger.debug("connected to", config.dbName, config.dbURL)
     dbConn = db
     return db
   } catch (err) {
