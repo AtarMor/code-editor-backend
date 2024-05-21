@@ -16,6 +16,16 @@ function setupSocketAPI(server) {
     gIo.on('connection', socket => {
         logger.info(`New connected socket [id: ${socket.id}]`)
 
+        socket.on('join', (codeId) => {
+            socket.join(codeId)
+            const room = gIo.sockets.adapter.rooms.get(codeId)
+            if (room.size === 1) {
+                socket.emit('mentor')
+            } else {
+                socket.emit('student')
+            }
+        })
+    
         socket.on('disconnect', () => {
             logger.info(`Socket disconnected [id: ${socket.id}]`)
         })
