@@ -1,5 +1,6 @@
 import { codeService } from './code.service.js'
 import { logger } from '../../services/logger.service.js'
+import axios from 'axios'
 
 export async function getCodeBlocks(req, res) {
   try {
@@ -31,5 +32,14 @@ export async function updateCodeBlock(req, res) {
   } catch (err) {
       logger.error('Failed to update code block', err)
       res.status(500).send({ err: 'Failed to update code block' })
+  }
+}
+
+export async function executeCodeBlock(req, res) {
+  try {
+    const response = await axios.post('https://emkc.org/api/v2/piston/execute', req.body)
+    res.json(response.data)
+  } catch (err) {
+    res.status(err.response ? err.response.status : 500).send(err.response ? err.response.data : { message: err.message })
   }
 }
