@@ -1,80 +1,80 @@
 [
     {
         "title": "Sum of Two Numbers",
-        "code": "// Write a function 'sum' that accepts two numbers and return their sum. //",
-        "initialCode": "// Write a function 'sum' that accepts two numbers and return their sum. //",
+        "code": "/* Write a function 'sum' that accepts\n two numbers and return their sum. */",
+        "initialCode": "/* Write a function 'sum' that accepts\n two numbers and return their sum. */",
         "solution": "function sum(a, b) { return a + b; }",
         "tests": "console.log(sum(1, 3)); // Expected output: 4\nconsole.log(sum(5, -2)); // Expected output: 3",
         "difficulty": "easy"
     },
     {
         "title": "Multiply Two Numbers",
-        "code": "// Write a function 'multiply' that accepts two numbers and returns their product. //",
-        "initialCode": "// Write a function 'multiply' that accepts two numbers and returns their product. //",
+        "code": "/* Write a function 'multiply' that accepts\n two numbers and returns their product. */",
+        "initialCode": "/* Write a function 'multiply' that accepts\n two numbers and returns their product. */",
         "solution": "function multiply(a, b) { return a * b; }",
         "tests": "console.log(multiply(2, 3)); // Expected output: 6\nconsole.log(multiply(4, -2)); // Expected output: -8",
         "difficulty": "easy"
     },
     {
         "title": "Check Even or Odd",
-        "code": "// Write a function 'isEven' that accepts a number and returns true if it is even and false if it is odd. //",
-        "initialCode": "// Write a function 'isEven' that accepts a number and returns true if it is even and false if it is odd. //",
+        "code": "/* Write a function 'isEven' that accepts\n a number and returns true if it is\n even and false if it is odd. */",
+        "initialCode": "/* Write a function 'isEven' that accepts\n a number and returns true if it is\n even and false if it is odd. */",
         "solution": "function isEven(num) { return num % 2 === 0; }",
         "tests": "console.log(isEven(4)); // Expected output: true\nconsole.log(isEven(7)); // Expected output: false",
         "difficulty": "easy"
     },
     {
         "title": "Find Maximum in Array",
-        "code": "// Write a function 'findMax' that accepts an array of numbers and returns the maximum number in the array. //",
-        "initialCode": "// Write a function 'findMax' that accepts an array of numbers and returns the maximum number in the array. //",
+        "code": "/* Write a function 'findMax' that accepts\n an array of numbers and returns the\n maximum number in the array. */",
+        "initialCode": "/* Write a function 'findMax' that accepts\n an array of numbers and returns the\n maximum number in the array. */",
         "solution": "function findMax(arr) { return Math.max(...arr); }",
         "tests": "console.log(findMax([1, 2, 3, 4, 5])); // Expected output: 5\nconsole.log(findMax([-10, -5, 0, 5, 10])); // Expected output: 10",
         "difficulty": "easy"
     },
     {
         "title": "Reverse a String",
-        "code": "// Write a function 'reverseString' that accepts a string and returns the string reversed. //",
-        "initialCode": "// Write a function 'reverseString' that accepts a string and returns the string reversed. //",
+        "code": "/* Write a function 'reverseString' that\n accepts a string and returns the\n string reversed. */",
+        "initialCode": "/* Write a function 'reverseString' that\n accepts a string and returns the\n string reversed. */",
         "solution": "function reverseString(str) { return str.split('').reverse().join(''); }",
         "tests": "console.log(reverseString('hello')); // Expected output: 'olleh'\nconsole.log(reverseString('world')); // Expected output: 'dlrow'",
         "difficulty": "medium"
     },
     {
         "title": "Factorial of a Number",
-        "code": "// Write a function 'factorial' that accepts a number and returns the factorial of that number. //",
-        "initialCode": "// Write a function 'factorial' that accepts a number and returns the factorial of that number. //",
+        "code": "/* Write a function 'factorial' that accepts\n a number and returns the factorial of\n that number. */",
+        "initialCode": "/* Write a function 'factorial' that accepts\n a number and returns the factorial of\n that number. */",
         "solution": "function factorial(n) { if (n <= 1) return 1; return n * factorial(n - 1); }",
         "tests": "console.log(factorial(5)); // Expected output: 120\nconsole.log(factorial(3)); // Expected output: 6",
         "difficulty": "medium"
     },
     {
         "title": "Check Palindrome",
-        "code": "// Write a function 'isPalindrome' that accepts a string and returns true if it is a palindrome, and false otherwise. //",
-        "initialCode": "// Write a function 'isPalindrome' that accepts a string and returns true if it is a palindrome, and false otherwise. //",
+        "code": "/* Write a function 'isPalindrome' that accepts\n a string and returns true if it is a\n palindrome, and false otherwise. */",
+        "initialCode": "/* Write a function 'isPalindrome' that accepts\n a string and returns true if it is a\n palindrome, and false otherwise. */",
         "solution": "function isPalindrome(str) { const reversed = str.split('').reverse().join(''); return str === reversed; }",
         "tests": "console.log(isPalindrome('racecar')); // Expected output: true\nconsole.log(isPalindrome('hello')); // Expected output: false",
         "difficulty": "medium"
     },
     {
         "title": "Find Duplicates in Array",
-        "code": "// Write a function 'findDuplicates' that accepts an array and returns an array of duplicate values. //",
-        "initialCode": "// Write a function 'findDuplicates' that accepts an array and returns an array of duplicate values. //",
+        "code": "/* Write a function 'findDuplicates' that\n accepts an array and returns an array\n of duplicate values. */",
+        "initialCode": "/* Write a function 'findDuplicates' that\n accepts an array and returns an array\n of duplicate values. */",
         "solution": "function findDuplicates(arr) { const seen = new Set(); const duplicates = new Set(); for (const item of arr) { if (seen.has(item)) { duplicates.add(item); } else { seen.add(item); } } return [...duplicates]; }",
         "tests": "console.log(findDuplicates([1, 2, 3, 3, 4, 5, 5])); // Expected output: [3, 5]\nconsole.log(findDuplicates(['a', 'b', 'a', 'c', 'b'])); // Expected output: ['a', 'b']",
         "difficulty": "hard"
     },
     {
         "title": "Find Longest Substring Without Repeating Characters",
-        "code": "// Write a function 'lengthOfLongestSubstring' that accepts a string and returns the length of the longest substring without repeating characters. //",
-        "initialCode": "// Write a function 'lengthOfLongestSubstring' that accepts a string and returns the length of the longest substring without repeating characters. //",
+        "code": "/* Write a function 'lengthOfLongestSubstring'\n that accepts a string and returns the\n length of the longest substring\n without repeating characters. */",
+        "initialCode": "/* Write a function 'lengthOfLongestSubstring'\n that accepts a string and returns the\n length of the longest substring\n without repeating characters. */",
         "solution": "function lengthOfLongestSubstring(s) { let n = s.length; let set = new Set(); let ans = 0, i = 0, j = 0; while (i < n && j < n) { if (!set.has(s.charAt(j))) { set.add(s.charAt(j++)); ans = Math.max(ans, j - i); } else { set.delete(s.charAt(i++)); } } return ans; }",
         "tests": "console.log(lengthOfLongestSubstring('abcabcbb')); // Expected output: 3 (substring: 'abc')\nconsole.log(lengthOfLongestSubstring('bbbbb')); // Expected output: 1 (substring: 'b')\nconsole.log(lengthOfLongestSubstring('pwwkew')); // Expected output: 3 (substring: 'wke')",
         "difficulty": "hard"
     },
     {
         "title": "Merge Intervals",
-        "code": "// Write a function 'mergeIntervals' that accepts an array of intervals, and merges all overlapping intervals. Each interval is an array of two numbers [start, end]. The function should return an array of the merged intervals. //",
-        "initialCode": "// Write a function 'mergeIntervals' that accepts an array of intervals, and merges all overlapping intervals. Each interval is an array of two numbers [start, end]. The function should return an array of the merged intervals. //",
+        "code": "/* Write a function 'mergeIntervals' that\n accepts an array of intervals, and merges\n all overlapping intervals. Each interval\n is an array of two numbers [start, end].\n The function should return an array of\n the merged intervals. */",
+        "initialCode": "/* Write a function 'mergeIntervals' that\n accepts an array of intervals, and merges\n all overlapping intervals. Each interval\n is an array of two numbers [start, end].\n The function should return an array of\n the merged intervals. */",
         "solution": "function mergeIntervals(intervals) { if (!intervals.length) return intervals; intervals.sort((a, b) => a[0] - b[0]); const result = [intervals[0]]; for (let i = 1; i < intervals.length; i++) { const prev = result[result.length - 1]; const curr = intervals[i]; if (prev[1] >= curr[0]) { prev[1] = Math.max(prev[1], curr[1]); } else { result.push(curr); } } return result; }",
         "tests": "console.log(mergeIntervals([[1, 3], [2, 6], [8, 10], [15, 18]])); // Expected output: [[1, 6], [8, 10], [15, 18]]\nconsole.log(mergeIntervals([[1, 4], [4, 5]])); // Expected output: [[1, 5]]\nconsole.log(mergeIntervals([[1, 10], [2, 6], [8, 10], [15, 18]])); // Expected output: [[1, 10], [15, 18]]",
         "difficulty": "hard"
