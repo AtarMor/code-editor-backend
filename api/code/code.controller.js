@@ -1,6 +1,6 @@
+import axios from 'axios'
 import { codeService } from './code.service.js'
 import { logger } from '../../services/logger.service.js'
-import axios from 'axios'
 
 export async function getCodeBlocks(req, res) {
   try {
